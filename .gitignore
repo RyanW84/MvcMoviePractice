@@ -1,0 +1,96 @@
+
+
+#Ignore vscode AI rules
+.github/instructions/codacy.instructions.md
+
+# ============================================================
+# .NET / ASP.NET Core
+# ============================================================
+
+## Build outputs
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+[Ll]og/
+[Ll]ogs/
+
+## Visual Studio files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+## Rider / JetBrains
+.idea/
+*.sln.iml
+
+## VS Code
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+## NuGet
+*.nupkg
+*.snupkg
+**/[Pp]ackages/
+!**/[Pp]ackages/build/
+nuget.exe
+.nuget/
+
+## Publish / deployment
+**/publish/
+**/PublishProfiles/
+**/pubxml/
+*.pubxml
+*.pubxml.user
+web.config
+
+## MSBuild
+*.TargetFrameworkInfoCache
+
+## Test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.trx
+*.coveragexml
+coverage/
+TestResults/
+
+## Roslyn / analyzers cache
+.cache/
+
+## Entity Framework migrations backup
+Migrations/
+
+## User secrets
+**/secrets.json
+appsettings.*.json
+!appsettings.json
+!appsettings.Development.json
+
+## Runtime / temp
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+## Docker
+.dockerignore
+
+## Environment files
+.env
+.env.*
+!.env.example
+
+## Azure / deployment artifacts
+.azure/
+*.zip
+
