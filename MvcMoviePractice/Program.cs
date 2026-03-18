@@ -1,4 +1,20 @@
+using Microsoft.EntityFrameworkCore;
+using MvcMoviePractice.Data;
+
 var builder = WebApplication.CreateBuilder(args);
+
+if (builder.Environment.IsDevelopment())
+{
+    builder.Services.AddDbContext<MvcMoviePracticeContext>(options =>
+        options.UseSqlite(builder.Configuration.GetConnectionString("MvcMoviePracticeContext"))
+    );
+}
+else
+{
+    builder.Services.AddDbContext<MvcMoviePracticeContext>(options =>
+        options.UseSqlServer(builder.Configuration.GetConnectionString("ProductionMvcMovieContext"))
+    );
+}
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
