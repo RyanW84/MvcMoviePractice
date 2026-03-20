@@ -31,7 +31,7 @@ namespace MvcMoviePractice.Controllers
 
             return View(movie);
         }
-//
+        //
         // GET: Movies/Create
         public IActionResult Create()
         {
@@ -148,3 +148,4 @@ namespace MvcMoviePractice.Controllers
         }
     }
 }
+//
