@@ -100,7 +100,7 @@ namespace MvcMoviePractice.Controllers
                     {
                         return NotFound();
                     }
-                    else
+                    else //
                     {
                         throw;
                     }
