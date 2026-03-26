@@ -102,6 +102,7 @@ namespace MvcMoviePractice.Controllers
                     }
                     else //
                     //
+                    //
                     {
                         throw;
                     }
