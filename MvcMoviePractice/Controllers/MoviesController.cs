@@ -77,7 +77,7 @@ namespace MvcMoviePractice.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(
-            [Bind("Id,Title,ReleaseDate,Genre,Price")] Movie movie
+            [Bind("Id,Title,ReleaseDate,Genre,Price,Rating")] Movie movie
         )
         {
             if (ModelState.IsValid)
