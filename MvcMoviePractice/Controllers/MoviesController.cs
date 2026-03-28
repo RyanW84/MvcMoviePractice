@@ -10,9 +10,20 @@ namespace MvcMoviePractice.Controllers
         private readonly MvcMoviePracticeContext _context = context;
 
         // GET: Movies
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View(await _context.Movie.ToListAsync());
+            if (_context.Movie == null)
+            {
+                return Problem("Entity Set 'MvcMovieContext.Movie' is null");
+            }
+
+            var movies = from m in _context.Movie select m;
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                movies = movies.Where(s => s.Title!.ToUpper().Contains(searchString.ToUpper()));
+            }
+            return View(await movies.ToListAsync());
         }
 
         // GET: Movies/Details/5
