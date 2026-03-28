@@ -23,7 +23,15 @@ namespace MvcMoviePractice.Controllers
             {
                 movies = movies.Where(s => s.Title!.ToUpper().Contains(searchString.ToUpper()));
             }
+
             return View(await movies.ToListAsync());
+        }
+
+        // POST: Movies
+        [HttpPost]
+        public string Index(string searchString, bool notUsed)
+        {
+            return "From [HttpPost]Index: filter on " + searchString;
         }
 
         // GET: Movies/Details/5
