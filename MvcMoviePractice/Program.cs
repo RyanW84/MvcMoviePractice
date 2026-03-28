@@ -20,6 +20,9 @@ else
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+// Add validation
+builder.Services.AddValidation();
+
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
