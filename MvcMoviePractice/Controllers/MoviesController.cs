@@ -157,14 +157,14 @@ namespace MvcMoviePractice.Controllers
             var movie = await _context.Movie.FirstOrDefaultAsync(m => m.Id == id);
             if (movie == null)
             {
-                return NotFound();
+                return NotFound(); //
             }
 
             return View(movie);
         }
 
         // POST: Movies/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost, ActionName("Delete")] //
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
